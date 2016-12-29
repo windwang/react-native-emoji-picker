@@ -41,7 +41,7 @@ const blacklistedEmojis = ['white_frowning_face', 'keycap_star', 'eject']
 const isAndroid = Platform.OS == 'android'
 const letterSpacing = 10
 const defaultEmojiSize = 30
-const padding = 5
+const padding = 0
 const filteredEmojis = emoji.filter(e => isAndroid ? !!e.google : !includes(blacklistedEmojis, e.short_name))
 // sort emojis by 'sort_order' then group them into categories
 const groupedAndSorted = groupBy(orderBy(filteredEmojis, 'sort_order'), 'category')
